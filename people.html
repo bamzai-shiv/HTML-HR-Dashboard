@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>People - Crextio HR Platform</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👥</text></svg>">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="index.html" class="logo">Crextio</a>
+      <nav class="nav">
+        <a href="index.html">Dashboard</a>
+        <a href="people.html" class="active">People</a>
+        <a href="hiring.html">Hiring</a>
+        <a href="devices.html">Devices</a>
+        <a href="apps.html">Apps</a>
+        <a href="salary.html">Salary</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="reviews.html">Reviews</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn btn-secondary">Filter</button>
+        <button class="btn btn-primary">+ Add Employee</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="welcome-section">
+        <h1 class="welcome-title">Team Directory</h1>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">78</div>
+            <div class="stat-label">Total Employees</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">12</div>
+            <div class="stat-label">New This Month</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">5</div>
+            <div class="stat-label">Departments</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Employee List</h3>
+          <div style="display: flex; gap: 1rem;">
+            <input type="search" placeholder="Search employees..." class="form-input" style="width: 300px;">
+            <select class="form-input" style="width: 150px;">
+              <option>All Departments</option>
+              <option>Engineering</option>
+              <option>Design</option>
+              <option>Marketing</option>
+              <option>Sales</option>
+              <option>HR</option>
+            </select>
+          </div>
+        </div>
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Employee</th>
+                <th>Department</th>
+                <th>Position</th>
+                <th>Status</th>
+                <th>Start Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 1rem;">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">LP</div>
+                    <div>
+                      <div style="font-weight: 500;">Lora Piterson</div>
+                      <div style="font-size: 0.875rem; color: var(--text-secondary);">lora@crextio.com</div>
+                    </div>
+                  </div>
+                </td>
+                <td>Design</td>
+                <td>UX/UI Designer</td>
+                <td><span class="badge badge-success">Active</span></td>
+                <td>Jan 15, 2024</td>
+                <td>
+                  <button class="btn btn-secondary" style="padding: 0.5rem;">Edit</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 1rem;">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: #f59e0b; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">SJ</div>
+                    <div>
+                      <div style="font-weight: 500;">Sarah Johnson</div>
+                      <div style="font-size: 0.875rem; color: var(--text-secondary);">sarah@crextio.com</div>
+                    </div>
+                  </div>
+                </td>
+                <td>Engineering</td>
+                <td>Senior Developer</td>
+                <td><span class="badge badge-success">Active</span></td>
+                <td>Mar 22, 2024</td>
+                <td>
+                  <button class="btn btn-secondary" style="padding: 0.5rem;">Edit</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 1rem;">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: #10b981; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">MR</div>
+                    <div>
+                      <div style="font-weight: 500;">Mike Rodriguez</div>
+                      <div style="font-size: 0.875rem; color: var(--text-secondary);">mike@crextio.com</div>
+                    </div>
+                  </div>
+                </td>
+                <td>Marketing</td>
+                <td>Marketing Manager</td>
+                <td><span class="badge badge-warning">On Leave</span></td>
+                <td>Feb 8, 2024</td>
+                <td>
+                  <button class="btn btn-secondary" style="padding: 0.5rem;">Edit</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 1rem;">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: #ef4444; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">AC</div>
+                    <div>
+                      <div style="font-weight: 500;">Alex Chen</div>
+                      <div style="font-size: 0.875rem; color: var(--text-secondary);">alex@crextio.com</div>
+                    </div>
+                  </div>
+                </td>
+                <td>Engineering</td>
+                <td>Frontend Developer</td>
+                <td><span class="badge badge-success">Active</span></td>
+                <td>Apr 12, 2024</td>
+                <td>
+                  <button class="btn btn-secondary" style="padding: 0.5rem;">Edit</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 1rem;">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: #8b5cf6; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">EW</div>
+                    <div>
+                      <div style="font-weight: 500;">Emily Wilson</div>
+                      <div style="font-size: 0.875rem; color: var(--text-secondary);">emily@crextio.com</div>
+                    </div>
+                  </div>
+                </td>
+                <td>HR</td>
+                <td>HR Specialist</td>
+                <td><span class="badge badge-success">Active</span></td>
+                <td>Jan 30, 2024</td>
+                <td>
+                  <button class="btn btn-secondary" style="padding: 0.5rem;">Edit</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Crextio HR Platform. Built with care for modern teams.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviews - Crextio HR Platform</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="index.html" class="logo">Crextio</a>
+      <nav class="nav">
+        <a href="index.html">Dashboard</a>
+        <a href="people.html">People</a>
+        <a href="hiring.html">Hiring</a>
+        <a href="devices.html">Devices</a>
+        <a href="apps.html">Apps</a>
+        <a href="salary.html">Salary</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="reviews.html" class="active">Reviews</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn btn-secondary">Export Data</button>
+        <button class="btn btn-primary">+ New Review</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="welcome-section">
+        <h1 class="welcome-title">Performance Reviews</h1>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">42</div>
+            <div class="stat-label">Completed Reviews</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">16</div>
+            <div class="stat-label">Pending Reviews</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">4.2</div>
+            <div class="stat-label">Average Rating</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">89%</div>
+            <div class="stat-label">On-Time Completion</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Review Status</h3>
+          </div>
+          <div class="card-body">
+            <div class="chart-container">
+              <canvas id="reviewStatusChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Performance Ratings</h3>
+          </div>
+          <div class="card-body">
+            <div style="space-y: 1rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <span>Exceeds Expectations</span>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <div class="progress" style="width: 100px;">
+                    <div class="progress-bar" style="width: 25%; background: var(--success);"></div>
+                  </div>
+                  <span>25%</span>
+                </div>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <span>Meets Expectations</span>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <div class="progress" style="width: 100px;">
+                    <div class="progress-bar" style="width: 60%; background: var(--primary);"></div>
+                  </div>
+                  <span>60%</span>
+                </div>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <span>Needs Improvement</span>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <div class="progress" style="width: 100px;">
+                    <div class="progress-bar" style="width: 15%; background: var(--warning);"></div>
+                  </div>
+                  <span>15%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Recent Reviews</h3>
+          </div>
+          <div class="card-body">
+            <div style="space-y: 1rem;">
+              <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius); margin-bottom: 1rem;">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">LP</div>
+                <div style="flex: 1;">
+                  <div style="font-weight: 500;">Lora Piterson</div>
+                  <div style="font-size: 0.875rem; color: var(--text-secondary);">Completed • Q3 2025</div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.25rem;">
+                  <span>4.5</span>
+                  <span style="color: #fbbf24;">⭐</span>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius); margin-bottom: 1rem;">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background: #f59e0b; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">SJ</div>
+                <div style="flex: 1;">
+                  <div style="font-weight: 500;">Sarah Johnson</div>
+                  <div style="font-size: 0.875rem; color: var(--text-secondary);">Completed • Q3 2025</div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.25rem;">
+                  <span>4.8</span>
+                  <span style="color: #fbbf24;">⭐</span>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius);">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background: #10b981; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">MR</div>
+                <div style="flex: 1;">
+                  <div style="font-weight: 500;">Mike Rodriguez</div>
+                  <div style="font-size: 0.875rem; color: var(--text-secondary);">In Progress • Q3 2025</div>
+                </div>
+                <span class="badge badge-warning">Pending</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: 2rem;">
+        <div class="card-header">
+          <h3 class="card-title">All Performance Reviews</h3>
+          <div style="display: flex; gap: 1rem;">
+            <input type="search" placeholder="Search reviews..." class="form-input" style="width: 300px;">
+            <select class="form-input" style="width: 150px;">
+              <option>All Periods</option>
+              <option>Q3 2025</option>
+              <option>Q2 2025</option>
+              <option>Q1 2025</option>
+            </select>
+          </div>
+        </div>
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Employee</th>
+                <th>Department</th>
+                <th>Review Period</th>
+                <th>Status</th>
+                <th>Overall Rating</th>
+                <th>Due Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 1rem;">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: #6366f1; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">LP</div>
+                    <div>
+                      <div style="font-weight: 500;">Lora Piterson</div>
+                      <div style="font-size: 0.875rem; color: var(--text-secondary);">UX/UI Designer</div>
+                    </div>
+                  </div>
+                </td>
+                <td>Design</td>
+                <td>Q3 2025</td>
+                <td><span class="badge badge-success">Completed</span></td>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <span>4.5</span>
+                    <span style="color: #fbbf24;">⭐⭐⭐⭐⭐</span>
+                  </div>
+                </td>
+                <td>Sep 30, 2025</td>
+                <td>
+                  <button class="btn btn-secondary" style="padding: 0.5rem;">View</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 1rem;">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: #f59e0b; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">SJ</div>
+                    <div>
+                      <div style="font-weight: 500;">Sarah Johnson</div>
+                      <div style="font-size: 0.875rem; color: var(--text-secondary);">Senior Developer</div>
+                    </div>
+                  </div>
+                </td>
+                <td>Engineering</td>
+                <td>Q3 2025</td>
+                <td><span class="badge badge-success">Completed</span></td>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <span>4.8</span>
+                    <span style="color: #fbbf24;">⭐⭐⭐⭐⭐</span>
+                  </div>
+                </td>
+                <td>Sep 30, 2025</td>
+                <td>
+                  <button class="btn btn-secondary" style="padding: 0.5rem;">View</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 1rem;">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: #10b981; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">MR</div>
+                    <div>
+                      <div style="font-weight: 500;">Mike Rodriguez</div>
+                      <div style="font-size: 0.875rem; color: var(--text-secondary);">Marketing Manager</div>
+                    </div>
+                  </div>
+                </td>
+                <td>Marketing</td>
+                <td>Q3 2025</td>
+                <td><span class="badge badge-warning">In Progress</span></td>
+                <td>-</td>
+                <td>Sep 30, 2025</td>
+                <td>
+                  <button class="btn btn-primary" style="padding: 0.5rem;">Complete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 1rem;">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: #ef4444; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">AC</div>
+                    <div>
+                      <div style="font-weight: 500;">Alex Chen</div>
+                      <div style="font-size: 0.875rem; color: var(--text-secondary);">Frontend Developer</div>
+                    </div>
+                  </div>
+                </td>
+                <td>Engineering</td>
+                <td>Q3 2025</td>
+                <td><span class="badge badge-warning">Pending</span></td>
+                <td>-</td>
+                <td>Sep 30, 2025</td>
+                <td>
+                  <button class="btn btn-primary" style="padding: 0.5rem;">Start</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Crextio HR Platform. Built with care for modern teams.</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const ctx = document.getElementById('reviewStatusChart');
+      if (ctx) {
+        new Chart(ctx, {
+          type: 'doughnut',
+          data: {
+            labels: ['Completed', 'In Progress', 'Pending', 'Overdue'],
+            datasets: [{
+              data: [42, 8, 16, 4],
+              backgroundColor: ['#10b981', '#f59e0b', '#6366f1', '#ef4444']
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                position: 'bottom'
+              }
+            }
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

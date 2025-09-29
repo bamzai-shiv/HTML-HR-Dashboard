@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Crextio HR Platform</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>"> -->
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="index.html" class="logo">Crextio</a>
+      <nav class="nav">
+        <a href="index.html" class="active">Dashboard</a>
+        <a href="people.html">People</a>
+        <a href="hiring.html">Hiring</a>
+        <a href="devices.html">Devices</a>
+        <a href="apps.html">Apps</a>
+        <a href="salary.html">Salary</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="reviews.html">Reviews</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn btn-secondary">⚙️</button>
+        <button class="btn btn-primary">+ New</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="welcome-section">
+        <h1 class="welcome-title">Welcome back, Nixtio</h1>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">78</div>
+            <div class="stat-label">Total Employees</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">56</div>
+            <div class="stat-label">New Hires</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">203</div>
+            <div class="stat-label">Active Projects</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">94</div>
+            <div class="stat-label">Satisfaction %</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Weekly Progress</h3>
+          </div>
+          <div class="card-body">
+            <div style="font-size: 2.5rem; font-weight: 300; margin-bottom: 0.5rem;">6.1h</div>
+            <p style="color: var(--text-secondary); margin-bottom: 1rem;">Work time this week</p>
+            <div class="chart-container" style="height: 150px;">
+              <canvas id="progressChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Time Tracker</h3>
+          </div>
+          <div class="card-body" style="text-align: center;">
+            <div style="font-size: 3rem; font-weight: 300; margin: 1rem 0;">
+              <span id="timeDisplay">02:35</span>
+            </div>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Active work session</p>
+            <div style="display: flex; gap: 1rem; justify-content: center;">
+              <button id="playBtn" class="btn btn-primary">▶ Play</button>
+              <button id="pauseBtn" class="btn btn-secondary">⏸ Pause</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Onboarding Progress</h3>
+            <span class="badge badge-warning">18% Complete</span>
+          </div>
+          <div class="card-body">
+            <div class="progress" style="margin-bottom: 1rem;">
+              <div class="progress-bar" style="width: 18%;"></div>
+            </div>
+            <ul style="list-style: none; space-y: 0.5rem;">
+              <li style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0;">
+                <span class="badge badge-success">✓</span> Interview Completed
+              </li>
+              <li style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0;">
+                <span class="badge badge-success">✓</span> Team Meeting
+              </li>
+              <li style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0;">
+                <span class="badge badge-warning">○</span> Project Assignment
+              </li>
+              <li style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0;">
+                <span class="badge badge-warning">○</span> Q3 Goals Discussion
+              </li>
+              <li style="display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0;">
+                <span class="badge badge-warning">○</span> HR Policy Review
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-2" style="margin-top: 2rem;">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Recent Activity</h3>
+          </div>
+          <div class="card-body">
+            <div style="space-y: 1rem;">
+              <div style="padding: 1rem 0; border-bottom: 1px solid var(--border);">
+                <div style="font-weight: 500;">Sarah Johnson joined Engineering</div>
+                <div style="font-size: 0.875rem; color: var(--text-secondary);">2 hours ago</div>
+              </div>
+              <div style="padding: 1rem 0; border-bottom: 1px solid var(--border);">
+                <div style="font-weight: 500;">Q3 Review Meeting scheduled</div>
+                <div style="font-size: 0.875rem; color: var(--text-secondary);">4 hours ago</div>
+              </div>
+              <div style="padding: 1rem 0; border-bottom: 1px solid var(--border);">
+                <div style="font-weight: 500;">New MacBook Pro assigned to Alex</div>
+                <div style="font-size: 0.875rem; color: var(--text-secondary);">1 day ago</div>
+              </div>
+              <div style="padding: 1rem 0;">
+                <div style="font-weight: 500;">Monthly salary report generated</div>
+                <div style="font-size: 0.875rem; color: var(--text-secondary);">2 days ago</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Department Distribution</h3>
+          </div>
+          <div class="card-body">
+            <div class="chart-container">
+              <canvas id="departmentChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Crextio HR Platform. Built with care for modern teams.</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
